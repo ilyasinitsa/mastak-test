@@ -27,6 +27,8 @@ a {
     --prmix-teal: #FF495C;
     --prmix-midnight-blue: #0E0661;
     --prmix-gradient: linear-gradient(0deg, #0E0661, #090533);
+
+    --soft-shadow: 0 10px 40px 0 #2e32731a;
 }
 
 /*Layout rules*/
@@ -117,7 +119,7 @@ a {
     border-radius: 12px;
     flex: 1;
     align-items: center;
-    box-shadow: 0 10px 40px 0 #2e32731a;
+    box-shadow: var(--soft-shadow);
 }
 
 .prmix-ebook {
@@ -140,7 +142,7 @@ a {
 }
 
 .prmix-ebook-description {
-    padding-top: 85px;
+    align-self: flex-end;
     width: 40%;
 }
 
@@ -178,4 +180,27 @@ a {
     font-size: 1.125em;
     font-weight: 500;
     line-height: 130%;
+}
+
+.prmix-ebook-slider {
+    padding-top: 110px;
+    padding-bottom: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1600px;
+}
+
+.prmix-ebook-slider prev,next {
+    cursor: pointer;
+}
+
+.slide {
+    padding: 0 7.5px;
+}
+
+.slide > img {
+    width: 100%;
+    height: auto;
 }
