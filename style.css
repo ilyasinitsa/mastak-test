@@ -24,9 +24,9 @@ a {
     --prmix-cool-grey: #939AAB;
     --prmix-light-grey: #F6F6F9;
     --prmix-teal: #5ADAC3;
-    --prmix-teal: #FF495C;
+    --prmix-red: #FF495C;
     --prmix-midnight-blue: #0E0661;
-    --prmix-gradient: linear-gradient(0deg, #0E0661, #090533);
+    --prmix-gradient: linear-gradient(180deg, #0E0661, #090533);
 
     --soft-shadow: 0 10px 40px 0 #2e32731a;
 }
@@ -203,4 +203,96 @@ a {
 .slide > img {
     width: 100%;
     height: auto;
+}
+
+.prmix-contact-us-wrapper {
+    display: grid;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+}
+
+.prmix-contact-us-background {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: calc(100% - 160px);
+    margin: 80px 0;
+    background: var(--prmix-gradient);
+}
+
+.prmix-contact-us-background .stack{
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.prmix-contact-us {
+    max-width: 835px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 535px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: auto;
+}
+
+.prmix-contact-us-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.prmix-contact-us-title {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.prmix-contact-us-plain {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.prmix-contact-us-link {
+    max-width: 242px;
+    height: 60px;   
+    display: grid;
+    place-items: center;
+    font-size: 1.125em;
+    font-weight: 500;
+    color: white;
+    background: var(--prmix-red);
+    border-radius: 35px;
+}
+
+.prmix-contact-us-company-description {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    align-self: center;
+    gap: 40px;
+    margin-left: 30%;
+}
+
+.prmix-contact-us-company-plain {
+    color: var(--prmix-white);
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 25px;
+    background: linear-gradient(135deg, #5242ffed, #3347FF00);
+    border-radius: 25px;
+}
+
+/* Media queries */
+@media (max-width: 1400px) {
+    .prmix-contact-us-wrapper {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+    }
 }
