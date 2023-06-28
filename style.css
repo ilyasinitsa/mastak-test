@@ -1,0 +1,181 @@
+/*Base rules*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --process-mix: linear-gradient(0deg, #4356FF, #939DFF);
+    --process-mix-2: linear-gradient(0deg, #8894FF, #4FDFFF);
+    --prmix-white: #FFFFFF;
+    --prmix-stroke: linear-gradient(0deg, #ffffff36, #ffffff08);
+    --prmix-black: #1E1B39;
+    --prmix-dark-grey: #424347;
+    --prmix-blue: #4356FF;
+    --prmix-green: #6EBE45;
+    --prmix-cool-grey: #939AAB;
+    --prmix-light-grey: #F6F6F9;
+    --prmix-teal: #5ADAC3;
+    --prmix-teal: #FF495C;
+    --prmix-midnight-blue: #0E0661;
+    --prmix-gradient: linear-gradient(0deg, #0E0661, #090533);
+}
+
+/*Layout rules*/
+
+#page {
+    background: var(--prmix-light-grey);
+    font-family: 'Inter', sans-serif;
+    color: var(--prmix-black);
+}
+
+.container {
+    max-width: 1514px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Modules*/
+
+.prmix-banners {
+    padding-top: 120px;
+    padding-bottom: 80px    
+}
+
+.prmix-banners-content {
+    display: flex;
+}
+
+.prmix-flair {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.prmix-banners-title {
+    font-size: 3.825em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.prmix-banners-plain {
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 150%;
+}
+
+.prmix-banner {
+    width: 50%;
+}
+
+.prmix-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prmix-demo-projects-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.prmix-demo-projects-title {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.prmix-demo-projects-links {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.prmix-demo-project-button {
+    background: var(--prmix-white);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 140%;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 35px;
+    justify-content: space-between;
+    border: 1.5px solid #4255ff80;
+    border-radius: 12px;
+    flex: 1;
+    align-items: center;
+    box-shadow: 0 10px 40px 0 #2e32731a;
+}
+
+.prmix-ebook {
+    padding-top: 35px;
+    padding-bottom: 95px;
+}
+
+.prmix-ebook-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prmix-ebook-image {
+    width: 50%;
+}
+
+.prmix-ebook-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prmix-ebook-description {
+    padding-top: 85px;
+    width: 40%;
+}
+
+.prmix-ebook-breadcrumb {
+    font-weight: bold;
+    font-size: 1.25em;
+    line-height: 150%;
+    color: var(--prmix-blue);
+    margin-bottom: 10px;
+}
+
+.prmix-ebook-title {
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 130%;
+    margin-bottom: 30px;
+}
+
+.prmix-ebook-plain {
+    font-weight: 400;
+    font-size: 1.25em;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
+.prmix-ebook-download-button {
+    display: flex;
+    max-width: 276px;
+    height: 60px;
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: var(--prmix-green);
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 130%;
+}
