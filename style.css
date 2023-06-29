@@ -43,9 +43,24 @@ a {
     max-width: 1514px;
     margin: 0 auto;
     padding: 0 20px;
+    z-index: 100;
+    position: relative;
+}
+
+.background-shape {
+    position: absolute;
+    z-index: 1;
 }
 
 /*Modules*/
+
+.background-shape.desktop{
+    display: block;
+}
+
+.background-shape.mobile {
+    display: none;
+}
 
 .prmix-banners {
     padding-top: 120px;
@@ -64,9 +79,15 @@ a {
     align-items: flex-start;
 }
 
+.prmix-flair > img {
+    max-width: 100%;
+    height: auto;
+}
+
 .prmix-banners-title {
     font-size: 3.825em;
     font-weight: bold;
+    line-height: 130%;
     margin-bottom: 30px;
 }
 
@@ -110,7 +131,7 @@ a {
     font-size: 1.5em;
     font-weight: 500;
     line-height: 140%;
-    height: 130px;
+    min-height: 130px;
     display: flex;
     flex-direction: row;
     padding: 0 35px;
@@ -120,11 +141,19 @@ a {
     flex: 1;
     align-items: center;
     box-shadow: var(--soft-shadow);
+    transition: background 0.2s ease-out,
+                border 0.2s ease-out,
+                color 0.5s ease-out;
+}
+
+.prmix-demo-project-button > svg > path {
+    transition: fill 0.5s ease-out;
 }
 
 .prmix-ebook {
+    position: relative;
     padding-top: 35px;
-    padding-bottom: 95px;
+    /* padding-bottom: 95px; */
 }
 
 .prmix-ebook-content {
@@ -192,7 +221,7 @@ a {
     max-width: 1600px;
 }
 
-.prmix-ebook-slider prev,next {
+.prmix-ebook-slider .slick-arrow {
     cursor: pointer;
 }
 
@@ -211,26 +240,30 @@ a {
     position: relative;
     overflow: hidden;
     grid-template-columns: 1fr 1fr;
+    height: 536px;
+    padding: 80px 0;
+    background: url('img/Union\ 1.png');
+    background-size: 100% auto;
+    box-sizing: content-box;
 }
 
 .prmix-contact-us-background {
     display: flex;
     align-items: center;
     width: 50vw;
-    height: calc(100% - 160px);
-    margin: 80px 0;
+    height: 100%;
     background: var(--prmix-gradient);
 }
 
 .prmix-contact-us-background .stack{
+    max-width: 100%;
+    height: auto;
     position: absolute;
     transform: translateX(-50%);
 }
 
 .prmix-contact-us {
     max-width: 835px;
-    margin-top: 80px;
-    margin-bottom: 80px;
     height: 535px;
     display: flex;
     justify-content: space-between;
@@ -293,6 +326,154 @@ a {
 @media (max-width: 1400px) {
     .prmix-contact-us-wrapper {
         grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
+        height: auto;
+        margin: 0;
+        background: none;
+        padding-bottom: 0;
     }
+
+    .prmix-contact-us {
+        max-width:none;
+        justify-content: center;
+        margin: 0;
+        padding: 0 20px;
+        height: auto;
+        background: url('img/Union\ 1.png');
+        background-size: 150% auto;
+    }
+
+    .prmix-contact-us-content {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .prmix-contact-us-background {
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        height: auto;
+        padding-bottom: 70px;
+        position: relative;
+        margin-top: 25vh;
+    }
+
+    .prmix-contact-us-background > .stack {
+        transform: translate3d(0, -50%, 0);
+        position: unset;
+        margin-bottom: -15%;
+        padding: 0 40px;
+    }
+
+    .prmix-contact-us-company-title > img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .prmix-contact-us-company-description {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .background-shape.desktop {
+        display: none;
+    }
+    .background-shape.mobile {
+        display: block;
+    }
+
+    .container {
+        padding: 0 25px;
+    }
+
+    .prmix-banners {
+        padding-top: 35px;
+        padding-bottom: 55px;
+        overflow-x: hidden;
+    }
+
+    .prmix-banners-title {
+        font-size: 3em!important;
+    }
+
+    .prmix-banners-plain {
+        font-size: 1.125em;
+    }
+
+    .prmix-flair {
+        width: 100%;
+    }
+
+    .prmix-banner {
+        margin: 40px 0;
+        width: 100%;
+    }
+
+    .prmix-banner > img {
+        max-width: none;
+        height: 270px;
+    }
+
+    .prmix-banners-content {
+        flex-direction: column;
+    }
+
+    .prmix-demo-projects-links {
+        flex-direction: column;
+    }
+
+    .prmix-ebook {
+        padding-top: 35px;
+        padding-bottom: 45px;
+    }
+
+    .prmix-ebook-content {
+        gap: 40px;
+        flex-direction: column-reverse;
+    }
+
+    .prmix-ebook-description {
+        width: 100%;
+    }
+
+    .prmix-ebook-plain {
+        font-size: 1.125em;
+    }
+
+    .prmix-ebook-image {
+        width: 100%;
+    }
+
+    .prmix-ebook-slider {
+        gap: 0;
+        margin-top: 40px;
+    }
+
+    .prmix-contact-us-content {
+        width: 100%;
+    }
+
+    .prmix-contact-us-plain {
+        font-size: 1.125em;
+    }
+
+    .prmix-contact-us-company-description {
+        width: 100%;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+/* Animations */
+
+.prmix-demo-project-button:hover {
+    background: linear-gradient(90deg, #1C1618, #0E0661);
+    color: white;
+    border: 1px solid #3F4159;
+}
+
+.prmix-demo-project-button:hover > svg > path {
+    fill: white;
 }
